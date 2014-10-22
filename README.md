@@ -1,6 +1,8 @@
 # ytnobody/riji
 
-This docker image installs [Riji](http://search.cpan.org/~songmu/Riji-0.1.3/lib/Riji.pm). Riji is a Simple, git based blog tool that written in perl.
+This docker image installs [Riji](http://search.cpan.org/~songmu/Riji-0.1.3/lib/Riji.pm). 
+
+Riji is a Simple, git based blog tool that written in perl. (Thanks to SONGMU)
 
 ## USAGE
 
