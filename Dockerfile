@@ -1,7 +1,14 @@
-FROM kazeburo/perl:v5.18
+FROM ytnobody/ubuntu-jp:latest
 MAINTAINER ytnobody <ytnobody@gmail.com>
 
 RUN cpanm --notest Riji
+RUN cpanm --notest Plack::Handler::Starman
 
 EXPOSE 3650
-ENTRYPOINT if [ ! -d "./blog" ] ; then git clone $BLOG_REPO_URL ./blog ; fi && cd ./blog && git pull && riji-server 
+ENTRYPOINT \
+    if [ ! -d "./blog" ] ; then \
+        git clone $BLOG_REPO_URL ./blog ; \
+    fi && \
+    cd ./blog && \
+    git pull && \
+    riji-server -s Starman -p 80
