@@ -4,7 +4,7 @@ MAINTAINER ytnobody <ytnobody@gmail.com>
 RUN cpanm --notest Riji
 RUN cpanm --notest Plack::Handler::Starman
 
-EXPOSE 3650
+EXPOSE 80
 ENTRYPOINT \
     if [ ! -d "./blog" ] ; then \
         git clone $BLOG_REPO_URL ./blog ; \
