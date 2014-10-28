@@ -1,0 +1,12 @@
+#!/bin/bash
+
+BLOG_PATH=/opt/blog
+
+if [ ! -d "$BLOG_PATH" ] ; then \
+    git clone $BLOG_REPO_URL $BLOG_PATH ; \
+fi && \
+
+cd $BLOG_PATH && \
+git pull && \
+riji-server -s Starman -p 80
+
