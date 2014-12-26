@@ -1,10 +1,10 @@
-FROM ytnobody/ubuntu-jp:latest
+FROM ytnobody/debian-plack
 MAINTAINER ytnobody <ytnobody@gmail.com>
 
-RUN cpanm --notest Riji
-RUN cpanm --notest Plack::Handler::Starman
-ADD run /usr/local/bin/run
-RUN chmod +x /usr/local/bin/run
+RUN cpanm --auto-cleanup=0 --notest Riji Plack::Handler::Starman
+ADD run /usr/bin/blog
+RUN chmod +x /usr/bin/blog
+RUN apt-get install git -y && apt-get clean
 
 EXPOSE 80
-ENTRYPOINT /usr/local/bin/run 
+ENTRYPOINT /usr/bin/run /usr/bin/blog

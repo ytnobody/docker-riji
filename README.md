@@ -16,6 +16,10 @@ $ docker run -e BLOG_REPO_URL=https://some.repo/path/to/blog.git -p 80:80 -d ytn
 
   ''REQUIRED''. An url for repository that contains files that pushed after "riji setup".
 
+* TIMEZONE
+
+  ''OPTIONAL''. timezone specification. Ex.) Asia/Tokyo
+
 ## EXPOSED PORT
 
 * TCP/80
