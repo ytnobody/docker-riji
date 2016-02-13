@@ -1,4 +1,4 @@
-FROM ytnobody/base
+FROM ytnobody/base:wheezy
 MAINTAINER ytnobody <ytnobody@gmail.com>
 
 ADD run /usr/bin/blog
